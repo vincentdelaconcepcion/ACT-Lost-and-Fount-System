@@ -21,32 +21,47 @@
 </header>
 
 <!-- Navigation bar of the website -->
-    <nav>
-        <ul class="flex justify-center gap-10 bg-white py-6 space-x-12 box-border shadow-md">
-            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-yellow-400">Browse Items</a></li>
-            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-yellow-400">Possible Matches</a></li>
-            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-yellow-400">My reports</a></li>
-            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-yellow-400">Claim guide</a></li>
+    <nav class="mb-10">
+        <ul class="flex justify-center gap-10 bg-white py-3 space-x-12 box-border shadow-md">
+            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-blue-800">Browse Items</a></li>
+            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-blue-800">Possible Matches</a></li>
+            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-blue-800">My reports</a></li>
+            <li><a href="#" class="text-2xl text-gray-400 font-bold hover:text-blue-800">Claim guide</a></li>
         </ul>
     </nav>
 
 <!-- Introduction of the website -->
-   <main class="max-w-7xl mx-auto mt-10 px-4">
-        <section class="bg-white rounded-3xl shadow-sm p-10 grid md:grid-cols-2 gap-10 items-center">
-            <!--Left Contents-->
+ <div class="relative bg-[url('campus.jpg')] bg-cover bg-center py-24">
+
+    <!-- Dark overlay so the image doesn't clash with the card -->
+    <div class="absolute inset-0 bg-blue-900/50"></div>
+
+    <main class="relative max-w-7xl mx-auto px-4">
+        <section class="bg-white rounded-3xl shadow-lg py-16 px-10 grid md:grid-cols-2 gap-10 items-center">
+
+            <!-- Left Contents -->
             <div class="space-y-6">
-                <h1 class="text-5xl font-bold text-gray-800">Welcome to ACT Lost and Found</h1>
-                <p class="text-gray-600 text-lg">We are here to help you find your lost items or report found items. Browse through our database of lost and found items, and if you have any information, please let us know.</p>
-                <a href="#" class="bg-blue-800 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">Get Started</a>
+                <h1 class="text-6xl font-bold text-blue-800">Welcome to ACT Lost and Found</h1>
+                <p class="text-xl text-black leading-relaxed">The ACT Lost and Found System helps students, faculty and staff recover items lost on campus. Anyone who finds something can log it here, and anyone who loses something can search for it or report it. Lost reports and found items appear side by side so matches are easy to spot.</p>
             </div>
-            <!--Right Contents-->
-            <div class="flex items-center">
-                <input type="button" value="+ New Report" class="text-2xl bg-yellow-400 text-blue-800 font-bold px-5 py-5 rounded-lg hover:bg-blue-800 hover:text-white hover:font-bold transition">
+
+            <!-- Right Contents -->
+            <div class="bg-gray-100 rounded-2xl p-6">
+                <button class="w-full bg-yellow-400 text-blue-800 text-3xl font-bold py-5 rounded-lg hover:bg-blue-800 hover:text-white transition">
+                    + New Report
+                </button>
+
+                <p class="mt-6 mb-3 text-lg font-bold uppercase text-blue-800">What you can do</p>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <button class="bg-white rounded-lg py-5 text-xl font-semibold text-blue-800 shadow-sm hover:bg-blue-800 hover:text-white transition">Search found items</button>
+                    <button class="bg-white rounded-lg py-5 text-xl font-semibold text-blue-800 shadow-sm hover:bg-blue-800 hover:text-white transition">Report a lost item</button>
+                    <button class="bg-white rounded-lg py-5 text-xl font-semibold text-blue-800 shadow-sm hover:bg-blue-800 hover:text-white transition">Log a found item</button>
+                    <button class="bg-white rounded-lg py-5 text-xl font-semibold text-blue-800 shadow-sm hover:bg-blue-800 hover:text-white transition">Claim with your ID</button>
+                </div>
             </div>
-           <div>
 
-           </div>
-
-    
+        </section>
+    </main>
 </body>
 </html>
