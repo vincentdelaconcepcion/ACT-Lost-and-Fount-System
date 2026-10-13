@@ -23,7 +23,7 @@
             <p class="rounded-lg text-white text-7xl leading-none font-bold">ACT</p>
             <div class="flex items-end gap-1 h-full pb-7 text-3xl font-bold text-white text-center">Lost and Found</div>
         </div>
-        <div class="text-white mt-0 px-20  font-bold">
+        <div class="text-white mt-0 px-20 font-bold">
             <p>Dela Concepcion, Vincent C.</p>
             <div>24-2001090</div>
         </div>
@@ -81,22 +81,7 @@
 
           
             
-            <!-- Match alert -->
-            <div id="matches" class="mt-8 scroll-mt-6 rounded-2xl border-l-4 border-act-yellow bg-white p-6 shadow-sm">
-                <h2 class="text-2xl font-extrabold text-act-blue">Possible matches</h2>
-                <div class="mt-4 grid gap-4 md:grid-cols-2">
-                    <div class="flex items-center gap-4 rounded-xl bg-act-mist p-4">
-                        <span class="text-4xl">🎒</span>
-                        <div class="min-w-0 flex-1"><p class="text-xl font-bold text-act-blue">Gray backpack</p><p class="text-base text-slate-500">Lost report #1021 may match a found item</p></div>
-                        <button data-open="f-3" class="rounded-lg bg-act-blue px-4 py-2 text-base font-bold text-white transition hover:bg-act-dark">Review</button>
-                    </div>
-                    <div class="flex items-center gap-4 rounded-xl bg-act-mist p-4">
-                        <span class="text-4xl">🧮</span>
-                        <div class="min-w-0 flex-1"><p class="text-xl font-bold text-act-blue">Scientific calculator</p><p class="text-base text-slate-500">Lost report #1019 may match a found item</p></div>
-                        <button data-open="f-2" class="rounded-lg bg-act-blue px-4 py-2 text-base font-bold text-white transition hover:bg-act-dark">Review</button>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- Search + filter -->
             <div id="board" class="mt-8 scroll-mt-6 flex flex-col gap-3 rounded-2xl bg-white p-4 shadow-sm md:flex-row md:items-center">
@@ -180,7 +165,7 @@
                 <button type="button" data-t="Found" class="tt flex-1 rounded-lg border-2 border-act-blue py-2 text-lg font-bold text-act-blue">I found something</button>
             </div>
 
-            <div>
+            <div class="pt-8">
                 <label class="block text-base font-semibold text-slate-700">Students Name</label>
                 <input id="nName" required class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-lg outline-none focus:border-act-blue focus:ring-2 focus:ring-act-blue">
             </div>
@@ -191,9 +176,16 @@
             </div>
 
             <div>
-                <label class="block text-base font-semibold text-slate-700">Item name</label>
+                <label class="block text-base font-semibold text-slate-700">Contact Number</label>
                 <input id="nName" required class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-lg outline-none focus:border-act-blue focus:ring-2 focus:ring-act-blue">
             </div>
+
+            <div class="pt-20">
+                <label class="block text-base font-semibold text-slate-700 ">Item name</label>
+                <input id="nName" required class="mt-1 w-full rounded-lg border border-slate-300 px-4 py-2 text-lg outline-none focus:border-act-blue focus:ring-2 focus:ring-act-blue">
+            </div>
+
+            
 
             <div>
                 <label class="block text-base font-semibold text-slate-700">Location</label>
