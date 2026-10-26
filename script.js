@@ -81,12 +81,13 @@ const badge = {
   'Claim pending': 'bg-act-yellow text-act-blue', 'Match reported': 'bg-act-mist text-act-blue', 'Released': 'bg-slate-200 text-slate-600'
 };
 
-/* NEW card layout: white picture tile on the left, gray-blue text panel on the right */
+/* Card layout: white picture tile on the left, colored text panel on the right.
+   Lost cards = pale blue (#EAF1FF), Found cards = pale yellow (#FFF6D1). */
 function card(x, kind) {
   const media = `<span class="flex size-full items-center justify-center text-7xl">${x.p ? `<img src="${x.p}" alt="" onerror="this.replaceWith(document.createTextNode('${emoji(x)}'))" class="size-full object-contain">` : emoji(x)}</span>`;
-  return `<button data-open="${x.id}" class="flex min-h-44 w-full items-stretch overflow-hidden rounded-3xl border-2 border-transparent bg-[#C9D2DE] text-left shadow-sm transition hover:border-act-yellow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-act-blue">
+  return `<button data-open="${x.id}" class="flex min-h-44 w-full items-stretch overflow-hidden rounded-3xl border-2 border-transparent ${kind === 'found' ? 'bg-[#FFF6D1]' : 'bg-[#EAF1FF]'} text-left shadow-sm transition hover:border-act-yellow hover:shadow-md focus:outline-none focus:ring-2 focus:ring-act-blue">
 <span class="flex w-32 shrink-0 items-center justify-center bg-white p-3 sm:w-52">${media}</span>
-<span class="flex min-w-0 flex-1 flex-col justify-center gap-1 p-5"><span class="block text-2xl font-bold text-act-blue">${esc(x.n)}</span><span class="block text-xl text-slate-700">📍 ${esc(place(x))}</span><span class="inline-block self-start rounded-full bg-act-mist px-3 py-0.5 text-base font-semibold text-act-blue">📅 ${kind === 'found' ? 'Retrieved' : 'Lost'}: ${fmt(x.d)}</span><span class="block truncate text-lg text-slate-600">${esc(x.t)}</span></span>
+<span class="flex min-w-0 flex-1 flex-col justify-center gap-1 p-5"><span class="block text-2xl font-bold text-act-blue">${esc(x.n)}</span><span class="block text-xl text-slate-700">📍 ${esc(place(x))}</span><span class="inline-block self-start rounded-full bg-white px-3 py-0.5 text-base font-semibold text-act-blue">📅 ${kind === 'found' ? 'Retrieved' : 'Lost'}: ${fmt(x.d)}</span><span class="block truncate text-lg text-slate-600">${esc(x.t)}</span></span>
 <span class="flex items-center pr-5 text-3xl text-act-blue">›</span></button>`;
 }
 
