@@ -181,9 +181,10 @@ $('nPhoto').onchange = e => {
 $('newForm').onsubmit = e => {
   e.preventDefault();
   if (!/^[0-9+\-\s]{7,15}$/.test($('nPhone').value.trim())) return toast('Enter a valid contact number.');
+  if (!/^[A-Za-z0-9._%+-]+@gmail\.com$/i.test($('nEmail').value.trim())) return toast('Enter a valid Gmail address, like name@gmail.com.');
   if ($('nDate').value > $('nDate').max) return toast('The date cannot be in the future.');
   const key = type.toLowerCase();
-  const it = { id: key[0] + '-' + Date.now(), n: $('nName').value.trim(), c: $('nCat').value, loc: $('nLoc').value, d: $('nDate').value, t: $('nDesc').value.trim(), p: photo };
+  const it = { id: key[0] + '-' + Date.now(), n: $('nName').value.trim(), c: $('nCat').value, loc: $('nLoc').value, d: $('nDate').value, t: $('nDesc').value.trim(), p: photo, email: $('nEmail').value.trim() };
   if (db[key].some(x => x.n.toLowerCase() === it.n.toLowerCase() && x.loc === it.loc && x.d === it.d)) return toast('This looks like a duplicate of an existing report.');
   if (it.loc === 'Classroom') { it.floor = $('nFloor').value; it.room = $('nRoom').value.trim(); }
   db[key].unshift(it);
